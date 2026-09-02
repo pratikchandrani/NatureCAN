@@ -1,0 +1,24 @@
+✅ Your Goals:
+✅ Use your own SSL certificate
+
+🔁 Automatically redirect HTTP to HTTPS
+
+🌐 Optionally support multiple domains
+
+🌱 Bonus: Let’s Encrypt setup with automatic renewals (optional, if you later prefer automation)
+
+-------------------
+Build Summary
+
+db and pma were skipped because they use prebuilt images (from Docker Hub).
+
+The app service (your PHP–Apache container) was rebuilt freshly, layer by layer.
+
+PHP extensions pdo, pdo_mysql, and mysqli were compiled correctly.
+
+Apache modules rewrite, headers, and expires were enabled.
+
+The final image was successfully tagged as:
+    Makefile: 
+        pankaj_ncan_app:latest
+        

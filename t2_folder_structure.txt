@@ -1,0 +1,99 @@
+lab-website/
+├── html/
+│   ├── index.php
+│   ├── db.php
+│   └── ... (other PHP files)
+├── config/
+│   └── default.conf
+└── docker-compose.yml
+
+-----------------------------------------------
+
+lab-website/
+├── Dockerfile
+├── docker-compose.yml
+├── config/
+│   └── default.conf
+├── html/
+│   ├── index.php
+│   ├── db.php
+│   └── ...
+
+------------------------------------------------
+
+lab-website/
+├── docker-compose.yml
+├── Dockerfile
+├── html/
+│   ├── index.php
+│   ├── login.php
+│   ├── auth.php
+│   └── ...
+├── config/
+│   ├── default.conf
+│   └── ssl/
+│       ├── selfsigned.crt
+│       └── selfsigned.key
+├── db/
+│   └── init.sql
+
+
+---------
+nature can-----
+ A production‑ready Docker setup for a PHP (Apache) + MariaDB stack designed to handle 1 crore (10,000,000) records minimum. Includes:
+    Apache + PHP 8.2 with pdo_mysql
+    MariaDB 10.11 (LTS) with tuned InnoDB settings
+    phpMyAdmin for quick DB access
+    Sample schema + indexes
+    Bootstrap‑based PHP UI with scalable, server‑side pagination (keyset + offset demo)
+    Volume mounts for persistence and local development
+
+
+    project-root/
+├─ docker-compose.yml
+├─ app/
+│ ├─ Dockerfile
+│ ├─ php.ini
+│ └─ src/
+│ ├─ config.php
+│ ├─ index.php
+│ └─ partials/
+│ └─ pagination.php
+├─ db/
+│ └─ my.cnf
+└─ sql/
+└─ schema.sql
+
+
+
+Why this is good:
+
+    src/ keeps all PHP/HTML/Bootstrap files separate.
+
+    docker-compose.yml at root makes it easy to run docker-compose up -d.
+
+    db/my.cnf lets you configure MySQL for large datasets (important for your 1 crore+ records).
+
+    sql/schema.sql can be auto-loaded into MySQL container.
+
+    php.ini allows you to tweak PHP settings (memory, upload size, etc.).
+
+
+
+----------------------------------- 24 10 2025 ------------------
+pankaj_NCan/
+│
+├── docker-compose.yml        ✅ move here
+├── app/
+│   ├── Dockerfile
+│   ├── php.ini
+│   └── src/
+│       ├── index.php
+│       ├── config.php
+│       └── partials/
+│
+├── db/
+│   └── my.cnf
+│
+└── sql/
+    └── schema.sql

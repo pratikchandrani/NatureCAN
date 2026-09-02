@@ -1,0 +1,977 @@
+@charset "utf-8";
+/* gene_association_CSS Document */
+
+/*left_pannel_CSS_in_Gene_asssociation*/
+.left-panel{
+	margin:5px 0px;
+	float:left;
+	display:inline-grid;
+	vertical-align:top;
+	}
+.tbody{
+	display:inline-grid;
+	background:white;
+	line-Height:normal;
+	}
+	.column{
+		/* float:left; */
+		padding:10px 4px;
+		}
+
+/*align the Row inside the Page*/
+.row-cont{
+	width:100%;
+	margin:none;
+	display:inline-grid;
+	vertical-align:middle;
+	}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display:table;
+  clear: both;
+}
+
+/* Left and right column */
+.column .side {
+  width: 8.5%;
+  margin:5px 4px;
+  padding:2px 2px;
+  }
+
+/* Middle column */
+	/* .column.middle {
+	  	/* max-width:90.5%;
+		min-width:90.5%; 
+		max-width: fit-content;
+	} */
+brdr-cont2{
+	margin: none;
+	}
+
+.element.style{ margin:none;}
+    
+	.element.html{ 
+        background:fixed;
+        color:rgb(238, 233, 233);
+        width:auto;
+        height: auto; 
+        margin:10px 10px;
+    }
+	
+    .side-pannel { 
+		background-attachment:scroll;
+		color:black;
+		/*font: 14px verdana;*/
+		vertical-align:middle;
+		float: left;
+		margin:auto; 
+		padding:auto;
+		line-height:normal;
+		accent-color:#6bbf59; 
+    }
+	
+
+	/* Style for the side panel container */
+	.side-nav-header {
+	  width: 100%; /* Adjust width as needed */
+	  font: 14px thin verdana;
+	  font-weight: bold;
+	  /* font-weight:300; */
+	  /* font-family: verdana;
+	  font-size:small; */
+	  background-color: #F0F0F0; /* Background color for the panel */
+	  display:inline-block;
+	  border: 0.5px solid #ccc;
+	  padding: 0.5px 0;
+	  margin:unset;
+	  border-radius:5px 5px 0px 0px;
+	  text-align:center;
+		color: #333;
+		/* letter-spacing: 1px; */
+	}
+	
+	/* Style for the checkboxes within the panel */
+	.side-nav-header input[type="checkbox"] {
+	  vertical-align: middle; /* Adjust alignment as needed */
+	  margin-right: 1px; /* Add spacing between checkbox and label */
+	}
+	
+	/* Style for the labels of the checkboxes */
+	.side-nav-header label {
+	  font-family: Verdana, sans-serif; /* Use the same font family as the header */
+	  font-size: 13px; /* Adjust font size as needed */
+	  display: block;
+	  margin-bottom: 0px; /* Add spacing between checkbox labels */
+	}
+	
+	/* Style for scrollable content inside the panel */
+	.side-nav-header {
+	  max-height: 67px; /* Set a maximum height and enable scrolling */
+	  overflow-y: auto;
+	}
+
+#horizontal-lines-sidepannel{
+	color:#6bbf59;
+	font-size:10px 9px;
+	margin:none;
+	}
+	
+.sp-disease-header{
+	margin:1px 0px 1px 0px;
+	}
+	
+
+	/* Style for the checkbox side panel */
+	.checkbox1 {
+		width:100%; /* Adjust the width as needed the size of the pannel is set (To be the 8%, so the max here is the 100% of 8% which is 8%.*/
+		background-color:#FAFAFA;
+		color-scheme: light;
+		border: 0.5px solid #ccc;
+		padding: 0px;
+		border-radius: 0 0 5px 5px;
+		font: 14px thin verdana;
+		}
+	
+	/* Style for the checkboxes within the panel */
+	.checkbox1 input[type="checkbox"] {
+	  vertical-align: text-top;
+	  margin-right: 5px; /* Add some spacing between the checkbox and label */
+	}
+	
+	/* Style for the labels of the checkboxes */
+	.checkbox1 label {
+	  font: 13px Verdana;
+	  display: block;
+	  margin-bottom: 0px; /* Add spacing between checkbox labels */
+	}
+	
+	/* Style for scrollable content inside the panel */
+	.checkbox1 {
+	  overscroll-behavior:auto;
+	  max-height:300px; 
+	  overflow-y:auto;
+	}
+	/* Custom Scrollbar Styles */
+	.checkbox1::-webkit-scrollbar {
+	  width: 10px; /* Width of the scrollbar */
+	   mix-blend-mode: difference;
+	}
+	
+	/* Track (the background) */
+	.checkbox1::-webkit-scrollbar-track {
+		background-color: #ecf0f1;
+	}
+	/* Handle (the draggable part) */
+	.checkbox1::-webkit-scrollbar-thumb {
+	  background: #6bbf59; /* Color of the handle */
+	  border-radius:5px;
+	   cursor: pointer; 
+	}
+
+/* this below code is used to call in java Script to do the Show/hide function */
+	.checkbox_container {
+		display:none;
+		}
+
+
+/*table filters_CSS*/
+
+/*link is been present in the headerpage also <remove incase>*/
+	a:link {
+		color: #000;
+		text-decoration: none;
+	}  
+	a:visited {
+		text-decoration: none;
+		color: #000;
+	}
+	a:hover {
+		text-decoration: none;
+		color: #03F;
+	}
+	a:active {
+		text-decoration: none;
+		color: #999;
+	}
+
+/*overl all inside a containers*/
+.container-fluid{display:block; width:auto; text-align:justify; margin:10px 0px 0px 0px;}
+
+
+/* Table-header - Styles */
+
+/* .trail_table_header{display:inline-block; position:relative; left:500px;font:16px verdana; font-weight:bold; margin:10px 10px; color:#333; text-align:center;} */
+.trail_table_header {
+    display: block; /* Use block for better responsiveness */
+    margin: 20px auto; /* Center the element horizontally */
+    font: 16px Verdana, sans-serif;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* Center text within the block */
+    max-width: 90%; /* Ensure it doesn't exceed the container width */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .trail_table_header {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin: 15px auto; /* Adjust margin */
+		text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .trail_table_header {
+        font-size: 12px; /* Further reduce font size for very small screens */
+        margin: 10px auto; /* Adjust margin */
+    }
+}
+
+
+
+/*border-1 :*/
+	.table-brdr{
+		margin-left:unset;
+		margin-right:unset;		
+		border:1px solid ;
+		border-radius:10px;
+		border-color: #6bbf59;
+		vertical-align:middle;
+		text-align:left;
+		/*float:right;*/
+		width:100%;
+		/*gap:5px;*/
+		}
+	.brdr-clr{
+		border-color: #6bbf59;
+		}
+/*table attribute -- in-case to call the "element styles"*/
+	/* table[Attributes Style] {
+	} */
+	
+/* Table Container */
+.table-container {
+	position: relative;
+	overflow: auto; 
+	width:100%;min-width:0;
+	/*min-width: 99%;*//* Adjust the width as needed */
+	/* margin: unset;  */
+	margin:10px 0px 0px 10px;
+	max-height:1300px;
+	min-height:auto;/* Set a fixed height for the container or adjust as needed */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+	border-radius:5px;
+}
+
+/* Custom Scrollbar Styles */
+.table-container::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+  height: 10px; /* Height of the scrollbar for the y-axis */
+  mix-blend-mode: difference;
+}
+
+/* Track (the background) */
+/* .table-container::-webkit-scrollbar-track {
+  background: #aee4a; Color of the track
+} */
+
+/* Handle (the draggable part) */
+.table-container::-webkit-scrollbar-thumb {
+  background: #6bbf59; /* Color of the handle */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #e74c3c; /* Color of the handle on hover */
+  cursor: auto;
+}
+
+/* Additional styles for both x-axis and y-axis */
+
+/* Track for x-axis */
+.table-container::-webkit-scrollbar-track:horizontal {
+  background-color: #ecf0f1;
+}
+
+/* Handle for x-axis */
+.table-container::-webkit-scrollbar-thumb:horizontal {
+  background: #6bbf59;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Handle on hover for x-axis */
+.table-container::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #e74c3c;
+  cursor: auto;
+}
+
+/* Button for decrement on x-axis */
+.table-container::-webkit-scrollbar-button:start:decrement {
+  background-color: #3498db;
+  border: 0px solid #2c3e50;
+  border-radius: 5px;
+}
+
+/* Button for increment on x-axis */
+.table-container::-webkit-scrollbar-button:end:increment {
+  background-color: #3498db;
+  border: 0px solid #2c3e50;
+  border-radius: 5px;
+  content: "\1F893";
+}
+
+/* Icon for decrement on x-axis */
+.table-container::-webkit-scrollbar-button:start:decrement::before {
+  content: '\1F893'; /* Unicode character for the arrow */
+  font-size: 12px; /* Adjust the font size */
+  color: red; /* Adjust the color */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Set the height of the arrows for x-axis */
+.table-container::-webkit-scrollbar-button:horizontal {
+  height: 20px;
+}
+
+/* another contianer for only tbody */
+/* .tbody_content tr{ */
+    /* max-height: 300px; Adjust the height as needed */
+    /* overflow-y: auto;  Enables vertical scrollbar */
+    /* overflow-x: hidden; Hides horizontal scrollbar */
+/* } */
+
+
+/*table styles -- 'whole-table of Gene association'*/
+	.table_ga {
+		display:table;
+		border-collapse:separate;
+		box-sizing: border-box;
+		text-indent: initial;
+		/* max-width:100%; */
+		width: -webkit-fill-available;
+		/*border-spacing: 15px black;*/
+		/* table-layout: auto;( Adjusts table size based on content ) */
+	}
+
+/*table row header (all of the headers) [currently div-is-hidden]*/
+	.t_head{
+		font:14px Verdana;
+		font-weight:250;
+		border-radius:10px 10px;
+		/* border-collapse:collapse; */
+		color: #6bbf59;
+		/* border:1px solid #6bbf59; */
+		border-radius:10px 10px;
+		border:1px solid #6bbf59;
+
+		/* background:linear-gradient(to bottom, rgba(139, 192, 245, 0.656), rgba(0, 234, 255, 0.294)), url(../image/images.JPG) no-repeat center;
+		background-size: cover; */
+		
+		/* margin:15px 10px; */
+
+		transition-duration:background: 300ms; 
+		/* color:white; */
+		}
+
+		.table_search_area >th {
+			background:white;
+			border-bottom:1px solid #6bbf59;
+			/* border-top:1px solid #6bbf59; */
+			border-radius:2.5px;
+			/* background-color:#fffffd8b; 	 */
+		}
+		/* .ls_form >input,
+		.ls_form >button{ 
+			border:0.5px solid #6bbf59;
+			border-radius:5px;
+		} */
+		
+/*table-row-font--and--onhover-effect */
+	tr{font:14px Verdana;}
+	
+	tr:hover {border-radius:5px; background-color:white; 
+		box-shadow: 2px 2px 1px rgba(165, 165, 165, 0.303); /* Add a shadow */
+	 }
+	
+	/* #navbar th {margin:10px;} */
+	tr th{
+		border-left:0.5px dashed #6bbf59;
+		/* border-left:0.5px dashed #eff0e9; */
+		border-right:0.5px dashed #6bbf59; 
+		box-shadow: 2px 2px 1px rgba(165, 165, 165, 0.303); /* Add a shadow */
+		/* transition: border-color 0.3s, box-shadow 0.3s; */
+
+	}
+	/*table-BODY-font--and--onhover-effect */
+	/*.tbody{max-width:89.1%;}*/
+   	tr:nth-child(even) {
+            /* background-color: #aee4ff45; */
+            background-color: #e3efff56;
+
+			/* border-radius:5px; */
+			/* background: linear-gradient(rgba(240, 248, 255, 0.8), rgba(240, 248, 255, 0.9) 90%), url(D:\xampp\htdocs\vs_actrec\gmi\style\bckg_hexagons_small.png); */
+
+			/*background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7) 70%), url(../image/bckg_hexagons_small.png);*/
+			/*background: radial-gradient(circle, rgba(174, 228, 255, 0.2) 80%,  rgba(174, 228, 225, 0.2) 20%, rgba(174, 218, 255, 0.2) 90%),
+            url(../../image/bckg_hexagons_small.png);*/
+			/* border:1px solid red; */
+        }
+		 
+		td{
+			font:14px verdana;
+			word-spacing:normal;
+			letter-spacing:0.1px;
+			line-height:1.1;
+			gap:10px;
+			padding: 8px 10px;
+			text-align:center;
+			accent-color:#6bbf59; 
+			cursor:auto;
+
+			}
+			tbody tr td{
+			border-left:0.5px dashed #eff0e9;
+			/* border-collapse: separate; */
+			}
+			td ul {padding:0px;}
+			td li {margin:1px 0px 0px 0px;}
+		/* <!--	.sh7 ul li:nth-child(4){text-align:justify;}--> */
+				td ul hr{ color:red; border:0.1px hidden red; padding:0.1px 0px;text-align:center;}
+				td hr{ color:red; border:0.1px hidden red; padding:0.1px 0px;text-align:center;}
+
+
+/*under_develop*/
+	tr div sup img title {
+		background:red;
+	}
+	
+	
+	
+/* Table Header Search Box (tsb: table_search_box) */
+
+/* Search Form Container */
+ .ls_form {
+  display: flex;
+  align-items:stretch;
+  justify-content: center;
+
+  margin:10px 5px 10px 5px;
+
+}
+/*search_bar*/
+.tsb {
+	max-width: 100%;
+	min-width: 50px;
+	width: 100%;
+	height: 29px;
+	
+	/* margin:10px 0; */
+
+	border: 0.1px #6aa8e68d;
+	border-style: groove;
+	border-radius: 5px 0 0 5px;
+	text-align: center;
+	color: #333;
+	background-color: white;
+	font: 12.5px verdana;
+	outline: none;
+	padding: 0px 2px 1px 0px; /* Adjust padding to provide spacing */
+	transition: border-color 0.3s, box-shadow 0.3s;
+	accent-color: #6bbf59;
+	caret-color: red;
+}
+.tsb::placeholder {
+  color: red; /* Change the color of the underscore as needed */
+  text-decoration: underline;
+	border: 0.1px #6bbf59;
+
+}
+
+
+/* Search Button */
+.ls_button {
+	/* border-width: ; */
+	border: 0.5px solid #6bbf59;
+
+	width: 25px;
+	height: 29px;
+	background: white;
+	/* color: #6bbf59; */
+	color: white;
+
+	border: none;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	background-color: #6bbf59;
+  /* background-color: #eff0e9; */
+}
+
+/* Optional: Add a subtle hover effect */
+.ls_button:hover {
+  background-color: #6bbf59;
+	border: 0.1px solid #6bbf59;
+	color: white;
+}
+		
+	.search-results {
+		margin-top: 10px;
+		background:white;
+		color:black;
+		display:inline;
+		vertical-align:center;
+		overflow:hidden;
+		width:50%;
+		overflow:visible;
+	}
+
+
+/*PAGINATIONS styles*/
+.pg_brdr{
+	border:0.3px dotted #eee;
+	background: #ffffff;
+	display:inline-grid;
+}
+.pagination_ga{
+	display:inline-flex;
+	flex-wrap:wrap;
+	position:relative;
+
+	align-self:center;
+	vertical-align:top;
+	margin:1px 0px 1px 3px;  padding: 0px 1px 1px 0px; 
+	font: 15px Verdana;
+	color:#333;
+	
+	text-align:center;
+	border-radius:5px;
+	text-decoration:none;
+	}
+	.pagination_ga a{
+		margin: 0 2px; 
+		color: black;
+		padding:6px 8px;
+		transition: background-color 3ms;
+	}
+	.pagination_ga a.active{
+		background-color: #6bbf59;
+		color:white; margin: 0 4px; 
+		}
+	.pagination_ga a.active {
+		text-decoration: 0.5px underline red;
+		border-radius:5px;
+		font: 15.5px Verdana;
+		background-color:none; 
+		}
+	.pagination_ga a:hover:not(.active){
+		background:#6bbf59; 
+		color:white;
+		border-radius:5px;
+		}
+		.pagination_ga>.pga_hellip:hover{color:white;}
+.pga_disabled{
+	color:grey;
+}
+
+
+/* <!--Row count Of the table rows--> */
+#num_rows{
+	font:14px  Verdana;
+	position:absolute;
+	top: 100px;
+	left:25px;
+	width:20%;
+	margin:none;
+	padding:30px 10px 0px 0px;
+
+	}
+
+/* <!---visible:: when the redirect from search_page && [result_output]----> */
+h4.result_output {
+    position: relative;
+    right: 50%;
+    top: 10%;
+    margin: 0px;
+    width: auto;
+    display: inline;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    float: right;
+    font:14px Verdana bold;
+}
+
+/* <!--TO SHOW AND HIDE THE COLUMN-DATA--> */
+
+
+table_ga{border:0.5px solid black;  margin:auto;}
+
+table_ga td{border:0px solid red;}
+
+table_ga #hidethis{
+	display:none;
+	width:1px;
+	background-color:#fff;
+	/*border-color:#0089de;*/
+}
+
+
+/* Add this CSS to adjust the spacing between buttons */
+    .separator {
+        color: #6bbf59;
+        display: inline;
+        font-weight: bold;
+        width: 1.5%;
+        float: left;
+        margin-right: 0px; /* Adjust the margin to control spacing */
+    }
+	
+/*DROP_DOWN_SELECTOR:: CSS [dd: dropdown]*/
+  #dd_form { width: auto; display: inline-block; margin-right: 10px; }
+	.dd_inner{ float: left; vertical-align: middle; text-align: center;  /* padding: 1px 5px 5px 5px;*/}
+
+	.dd_select{
+	font: 15px Verdana; 
+        /*background: #EEE;*/
+        color:#6bbf59;
+		
+        cursor: pointer;
+		vertical-align:baseline;
+       		    border: 0.5px dotted #EEE;/*border-bottom: 0px solid #6bbf59; border-top: 0px solid #6bbf59; border-right: 1px solid #6bbf59; border-left: 0px solid #6bbf59;*/
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: 0.5px underline;
+       /* padding: 3px; */max-width:auto; height:24px; }
+	   .dd_select:hover {background: #6bbf59; color:white; }
+		
+    /* Styles for options */
+    .dd_option {
+        font: 14px Verdana;
+        background:white ;
+        color: black;
+        padding: 6px;
+		border-radius:5px;
+    }
+	 /* Hover effect */
+    .dd_option:hover { background:#aee4ff; color:red; }
+
+    /* Style for selected option */
+    .dd_option[selected] {
+        font:bold 14px Verdana;
+		background:#aee4ff;
+    }
+	.dd_option[selected]:hover{background:#aee4ff; color:white;}
+
+
+
+
+	
+
+/*below:: are teh id's of the button[btn] of history[bck], clear[clr], reset button*/
+.btn_bck,
+.btn_dwnld,
+.btn_clr{
+	font: 15px Verdana;
+	vertical-align:middle;
+	color: #333;
+	border:none;/*border: 1px solid #6bbf59;*/
+				/*border-bottom: 0px solid #6bbf59; border-top: 0px solid #6bbf59; border-right: 1px solid #6bbf59; border-left: 0px solid #6bbf59;*/
+	/*background:#EEE;*/
+	 /* background: WHITE; */
+	width:60px;
+	height:24px;
+	vertical-align:middle;
+	
+ 	border-radius:5px;
+	
+	cursor:pointer;
+	}
+	.btn_bck:hover, 
+	.btn_clr:hover{color: white; background: #6bbf59; border-radius:5px;}
+
+/*restart button CSS and the animation*/
+.btn_restart{
+	color:#333;
+	/* background:linear-gradient(to right, rgb(198 213 228 / .2), rgb(0 0 0 /0)), url(../image/bck-image1.JPG) no-repeat center; */
+	background-size: cover;
+	/*background:#6bbf59;*/
+	width:80px;
+	height:25px;
+	text-align:center;
+	vertical-align:middle;
+	font:14px Verdana;
+	border:none;
+	/*border-bottom: 0px solid #6bbf59; border-top: 0px solid #6bbf59; border-right: 1px solid #6bbf59; border-left: 0px solid #6bbf59;*/
+		/*border: 1px solid #6bbf59;*/
+border-radius:5px;
+/*	border:thin solid;*/
+	/* background:#EEE; */
+	animation: mymove 0ms infinite;
+	cursor:pointer;
+	}
+	.btn_restart:hover{color: white; background: #6bbf59; border-radius:5px;}
+	
+	/*optional keyframe for the rest button To get highlight(a-blink) when its pop-up*/
+	@keyframes mymove {
+  from {background-color: red;} 
+  to {background-color: #6bbf59;}
+	}
+	
+/*column-visibility :: to-hide and show column */
+.checkbox-dropdown {
+	position: relative;
+	display: inline-block;
+	font:15px thin vardana;
+	letter-spacing:0.5px;
+	}
+
+.checkbox-dropdown button {
+	font:15px thin vardana;
+	background-color: #6bbf59;
+	color: #fff;
+	   border:0.5px solid #6bbf59;
+	border-radius:5px;
+	padding: 3px 15px;
+	cursor: pointer;letter-spacing:0.5px;
+	vertical-align:middle;
+}
+
+#checkboxes button:hover {
+	background-color:#6bbf59; color: white;
+	padding: 3px 15px;
+	border:0.5px solid #6bbf59; border-radius:5px;
+}
+#checkboxes::-webkit-scrollbar {
+	width: 10px;
+	mix-blend-mode:difference;
+}
+#checkboxes::-webkit-scrollbar-thumb {
+	background: #6bbf59;
+	border-radius: 5px;
+	cursor: pointer;
+	margin:0px 0px 12px 0px;
+}
+#checkboxes::-webkit-scrollbar-track {
+	background-color: #ecf0f1;
+}
+#checkboxes {
+	width:150%;
+	max-height:250px; overflow-y:auto; overscroll-behavior:auto;
+	position: absolute;
+	background-color: #fff;
+	border: 0.5px solid #6bbf59;
+	border-radius:5px;
+	box-shadow: 1px 10px 9px #CCC;
+	  padding: 1px 8px;
+	z-index: 1;
+	display: none;
+	font:15px vardana;transition: box-shadow 0.3s ease-in-out 1s;
+}
+ .dd-list {
+		list-style-type: none;
+		padding: 0;
+		/*padding:url(../../image/bckg_hexagons_small.png);*/
+	 }
+
+	.dd-list li {
+		margin:5px 0px 0px 0px;padding:1px 2px; display: flex; /* Use flexbox to align items vertically in the middle */
+		align-items: center; /* Align items vertically in the middle */
+	
+	}
+	 .dd-list li:hover{
+		margin:5px 0px 0px 0px;background-image:url(../image/bckg_hexagons_small.png); /* Change the background color on hover */
+		opacity:5px;padding:1px 2px;
+		transition: box-shadow 0.3s ease-in-out 0s;
+		border-radius:0px 5px 5px 0px;
+	}
+	   .dd-list li input.dd_option {
+		margin-right: 1px; /* Add some spacing between the checkbox and label */
+	}
+	.thin-arrow {
+		font:1px verdana; width: 5px;  height: 1px; font-size:smaller;
+	}
+	
+/*end - column visibility*/
+			
+/*end - column visibility*/
+    
+/* <!---start:: FOOTER-----> */
+.table_footer{
+			display:flex;
+			flex-wrap:wrap;
+			align-items:center;
+			gap:10px;
+			margin:1px 10px 0px 0px;
+			padding: 0px 0px 0px 4px;
+			}
+
+        
+
+/* <!--TOOL-TIP-[in-process]---> */
+	/* setup tooltips */
+		.tooltip {
+		  position: relative;
+		}
+		.tooltip:before,
+		.tooltip:after {
+		  display: block;
+		  opacity: 0;
+		  pointer-events: none;
+		  position: absolute;
+		}
+		.tooltip:after {
+		  border-right: 6px solid transparent;
+		  border-bottom: 6px solid rgba(0,0,0,.75); 
+		  border-left: 6px solid transparent;
+		  content: '';
+		  height: 0;
+			top: 20px;
+			left: 20px;
+		  width: 0;
+		}
+		.tooltip:before {
+		  background: rgba(0,0,0,.75);
+		  border-radius: 2px;
+		  color: #fff;
+		  content: attr(data-title);
+		  font-size: 14px;
+		  padding: 6px 10px;
+			top: 26px;
+		  white-space: nowrap;
+		}
+	
+	/* expand */
+		.tooltip.expand:before {
+		  transform: scale3d(.2,.2,1);
+		  transition: all .2s ease-in-out;
+		}
+		.tooltip.expand:after {
+		  transform: translate3d(0,6px,0);
+		  transition: all .1s ease-in-out;
+		}
+		.tooltip.expand:hover:before,
+		.tooltip.expand:hover:after {
+		  opacity: 1;
+		  transform: scale3d(1,1,1);
+		}
+		.tooltip.expand:hover:after {
+		  transition: all .2s .1s ease-in-out;
+		}
+
+/* ===== RESPONSIVE MEDIA QUERIES ===== */
+
+/* Laptop / small desktop */
+@media (max-width: 1024px) {
+	.table-container {
+		margin: 10px 0;
+	}
+	td, tr {
+		font-size: 13px;
+	}
+	td {
+		padding: 6px 8px;
+	}
+	.pagination_ga {
+		font-size: 13px;
+	}
+	.pagination_ga a {
+		padding: 4px 6px;
+	}
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+	.table-container {
+		margin: 5px 0;
+		max-height: none;
+	}
+	td, tr {
+		font-size: 12px;
+	}
+	td {
+		padding: 5px 6px;
+	}
+	.t_head {
+		font-size: 12px;
+	}
+	.tsb {
+		min-width: 40px;
+		height: 26px;
+		font-size: 11px;
+	}
+	.ls_button {
+		width: 22px;
+		height: 26px;
+		font-size: 12px;
+	}
+	.ls_form {
+		margin: 5px 3px;
+	}
+	.table_footer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.pagination_ga {
+		font-size: 12px;
+		width: 100%;
+		justify-content: center;
+	}
+	.pagination_ga a {
+		padding: 3px 5px;
+	}
+	.btn_restart, .btn_download {
+		font-size: 12px;
+		padding: 6px 12px;
+	}
+	.trail_table_header {
+		font-size: 14px;
+	}
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+	td, tr {
+		font-size: 11px;
+	}
+	td {
+		padding: 4px 4px;
+	}
+	.t_head {
+		font-size: 11px;
+	}
+	.tsb {
+		min-width: 30px;
+		height: 24px;
+		font-size: 10px;
+	}
+	.ls_button {
+		width: 20px;
+		height: 24px;
+		font-size: 11px;
+	}
+	.ls_form {
+		margin: 3px 2px;
+	}
+	.pagination_ga {
+		font-size: 11px;
+	}
+	.trail_table_header {
+		font-size: 12px;
+	}
+	.btn_restart, .btn_download {
+		width: 100%;
+		font-size: 11px;
+	}
+	.dd_select {
+		font-size: 13px;
+	}
+}
+		

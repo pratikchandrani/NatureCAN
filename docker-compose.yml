@@ -1,0 +1,92 @@
+# Production Docker Compose Configuration
+# Usage: docker compose up -d
+
+services:
+  # phpMyAdmin - Database management UI
+  pma:
+    image: phpmyadmin:latest
+    container_name: nc_phpmyadmin
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8018:80"
+    environment:
+      - PMA_HOST=db
+      - PMA_ARBITRARY=0
+      - UPLOAD_LIMIT=512M
+    networks:
+      - nc_internal
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: nc_php-app
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8017:80"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=${MARIADB_DATABASE}
+      - DB_USER=${MARIADB_USER}
+      - DB_PASS=${MARIADB_PASSWORD}
+      - PHP_MEMORY_LIMIT=${PHP_MEMORY_LIMIT:-1024M}
+    networks:
+      - nc_internal
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: "2.0"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  db:
+    image: mariadb:10.11
+    container_name: nc_mariadb
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+      - "--skip-name-resolve"
+      - "--max-allowed-packet=64M"
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
+      - MARIADB_USER=${MARIADB_USER}
+      - MARIADB_PASSWORD=${MARIADB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf:ro
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    networks:
+      - nc_internal
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: "2.0"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+    restart: unless-stopped
+
+volumes:
+  db_data:
+    driver: local
+
+networks:
+  nc_internal:
+    driver: bridge

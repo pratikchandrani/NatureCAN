@@ -1,0 +1,1 @@
+cut -d',' -f6 plant_final_data_105969_9B.csv | sort | uniq -c > summary.txt

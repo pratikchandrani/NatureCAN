@@ -1,0 +1,66 @@
+# Docker Build Context Exclusions
+# These files/folders will not be sent to Docker during build
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+*.md
+LICENSE
+docs/
+
+# Development files
+docker-compose.dev.yml
+.env
+.env.example
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Test files
+tests/
+__tests__/
+*.test.php
+test_*.php
+
+# Archive/Legacy code
+app/src/_archive/
+_archive/
+
+# Large datasets (mount separately)
+DATASET/
+
+# Node modules (if any)
+node_modules/
+
+# PHP dependencies (install in container)
+vendor/
+
+# Database data
+db_data/
+mysql_data/
+*.sql
+sql/
+
+# User uploads (mount as volume)
+app/src/uploads/

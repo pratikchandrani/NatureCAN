@@ -1,0 +1,23 @@
+# Development Docker Compose Configuration
+# Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+
+services:
+  app:
+    container_name: nc_php-app_dev
+    # Mount source code for live editing
+    # Use Windows-compatible path format
+    volumes:
+      - type: bind
+        source: ./app/src
+        target: /var/www/html
+    environment:
+      - PHP_MEMORY_LIMIT=${PHP_MEMORY_LIMIT:-2048M}
+
+  db:
+    container_name: nc_mariadb_dev
+    # Expose database port for development tools
+    ports:
+      - "3311:3306"
+
+  pma:
+    container_name: nc_phpmyadmin_dev
