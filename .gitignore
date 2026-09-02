@@ -38,6 +38,7 @@ npm-debug.log
 *~
 *.sublime-project
 *.sublime-workspace
+.claude
 
 # ===================
 # OS Files
